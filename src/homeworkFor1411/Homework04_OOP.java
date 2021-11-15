@@ -15,7 +15,7 @@ package homeworkFor1411;
  * и выводит информацию о нем, его этажах, квартирах и комнатах, вызывая методы print.
  */
 
-public class Homework04OOP {
+public class Homework04_OOP {
     public static void main(String[] args) {
 
         Floor[] floors = {

@@ -11,7 +11,7 @@ package homeworkFor1411;
  *
  * */
 
-public class Homework02 {
+public class Homework02_Arrays {
     public static void main(String[] args) {
         char[] charArray = {'a', '6', 'y', 'P', 'T', 'q', '9', '+'};
         int[] intArray = getIntArray(charArray);

@@ -14,7 +14,7 @@ import java.util.Arrays;
  * “Привет 8, как 1 2 твои дела? Может4, сделать 3 дело?” -> 18 (8+1+2+4+3)
  * */
 
-public class Homework06String {
+public class Homework06_String {
     public static void main(String[] args) {
         String line = "Привет 8, как 1 2 твои дела? Может4, сделать 3 дело?";
         int[] digitArray = filterDigit(line);

@@ -9,7 +9,7 @@ package homeworkFor1411;
  * “abc Cpddd Dio OsfWw” -> “ABCPDIOSFW”
  * */
 
-public class Homework05String {
+public class Homework05_String {
     public static void main(String[] args) {
         String line = "abc Cpddd Dio OsfWw";
         String result = cleanLine(line);

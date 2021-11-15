@@ -14,7 +14,7 @@ import java.util.Arrays;
  *                              [1, 9, 3]
  */
 
-public class Homework03 {
+public class Homework03_Arrays {
     public static void main(String[] args) {
         int[] lineArray = {-4, 0, 1, 9, 0, -18, 3};
 
