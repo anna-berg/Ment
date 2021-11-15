@@ -1,6 +1,4 @@
-package lesson1;
-
-import java.util.Scanner;
+package homeworkFor0711;
 
 /**
  * Посчитать четные и нечетные цифры целого числа и вывести их на консоль.
@@ -8,6 +6,7 @@ import java.util.Scanner;
  * а возвращать количество четных цифр (вторая функция - нечетных).
  * Например: если введено число 228910, то у него 4 четные цифры (2, 2, 8, 0) и 2 нечетные (9, 1).
  * */
+
 public class Task7 {
     public static void main(String[] args) {
         int number = 228910;

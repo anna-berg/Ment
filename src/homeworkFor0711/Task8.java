@@ -1,4 +1,5 @@
-package lesson1;
+package homeworkFor0711;
+
 /**
  * Дано целое число.
  * Написать функцию, которая принимает целое число, а возвращает целое число обратное этому (не строку!).
@@ -7,9 +8,14 @@ package lesson1;
  *
  * Примечание: для решения может понадобится функция возведение числа в степень: Math.pow(число, степень)
  * */
+
 public class Task8 {
     public static void main(String[] args) {
-        int number = 1234567;
+        System.out.println( reverseNumbers(1234567));
+
+    }
+
+    private static int reverseNumbers(int number) {
         int newNumber = 0;
 
         while (number>0){
@@ -17,7 +23,6 @@ public class Task8 {
             newNumber = (newNumber*10) + n;
             number /= 10;
         }
-        System.out.println(newNumber);
-
+        return newNumber;
     }
 }

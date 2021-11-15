@@ -1,4 +1,4 @@
-package lesson1;
+package homeworkFor0711;
 
 import java.util.Scanner;
 
@@ -12,6 +12,7 @@ import java.util.Scanner;
  * d. Максимальное количество дневных осадков за этот период
  * Не использовать массивы!
  * */
+
 public class Task6 {
     public static void main(String[] args) {
         int sum = 0;

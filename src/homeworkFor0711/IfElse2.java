@@ -1,6 +1,6 @@
-package lesson1;
+package homeworkFor0711;
 
-/*
+/**
 * Даны 3 переменные:
     - operand1 (double)
     - operand2 (double)

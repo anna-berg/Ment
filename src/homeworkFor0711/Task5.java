@@ -1,4 +1,4 @@
-package lesson1;
+package homeworkFor0711;
 
 import java.util.Scanner;
 
@@ -6,6 +6,7 @@ import java.util.Scanner;
  * Написать программу, вычисляющую и отображающую все числа Фибоначчи меньше введённого пользователем целого числа.
  * Решить двумя способами: с помощью цикла и с помощью рекурсии.
  * */
+
 public class Task5 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

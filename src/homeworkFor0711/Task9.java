@@ -1,4 +1,5 @@
-package lesson1;
+package homeworkFor0711;
+
 /**
  * Программист Ваня сразу после окончания курсов dmdev устроился в
  * IT компанию на позицию Junior Java Developer с зарплатой 600$ в месяц.
@@ -11,6 +12,7 @@ package lesson1;
  *
  * Для интереса: попробовать увеличить процент, которые Ваня инвестирует из своей зарплаты
  * */
+
 public class Task9 {
     public static void main(String[] args) {
         int salary = 600;
