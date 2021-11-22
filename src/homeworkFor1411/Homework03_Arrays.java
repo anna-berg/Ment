@@ -9,9 +9,9 @@ import java.util.Arrays;
  * Если для какого-то из массивов не будет значений, то должен быть создан пустой массив.
  * Возвращает функция эти три массива в виде одного двумерного.
  * Пример:
- *                              [-4, -18]
+ * [-4, -18]
  * [-4, 0, 1, 9, 0, -18, 3] ->  [0, 0]
- *                              [1, 9, 3]
+ * [1, 9, 3]
  */
 
 public class Homework03_Arrays {
@@ -29,7 +29,7 @@ public class Homework03_Arrays {
         int positiveCounter = 0;
         int nullCounter = 0;
 
-        int [][] result = new int[3][];
+        int[][] result = new int[3][];
         for (int value : lineArray) {
             if (value == 0) {
                 nullCounter++;
@@ -52,7 +52,7 @@ public class Homework03_Arrays {
 
         for (int value : lineArray) {
             if (value == 0) {
-                result [1][nullCounter] = value;
+                result[1][nullCounter] = value;
                 nullCounter++;
             } else {
                 if (value > 0) {

@@ -5,9 +5,9 @@ package homeworkFor1411;
  * Удалить из нее все повторяющиеся символы без учета регистра, если они идут друг за другом. Также удалить пробелы.
  * Результат привести к верхнему регистру.
  * Например:
- *
+ * <p>
  * “abc Cpddd Dio OsfWw” -> “ABCPDIOSFW”
- * */
+ */
 
 public class Homework05_String {
     public static void main(String[] args) {
@@ -23,8 +23,8 @@ public class Homework05_String {
         StringBuilder resultBuffered = new StringBuilder();
         String resultString = "";
         char current = ' ';
-        for (char ch: charArray) {
-            if (current != ch){
+        for (char ch : charArray) {
+            if (current != ch) {
                 resultBuffered.append(ch);
                 current = ch;
             }

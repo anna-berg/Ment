@@ -20,22 +20,22 @@ public class Homework04_OOP {
 
         Floor[] floors = {
                 new Floor(1, new Flat[]{
-                         new Flat(1, new Room[]{
-                                 new Room(true),
-                                 new Room(false),
-                                 new Room(false)
-                         }),
-                        new  Flat(2, new Room[]{
+                        new Flat(1, new Room[]{
+                                new Room(true),
+                                new Room(false),
+                                new Room(false)
+                        }),
+                        new Flat(2, new Room[]{
                                 new Room(true),
                                 new Room(false)
-                                }),
-                        new  Flat(3, new Room[]{
+                        }),
+                        new Flat(3, new Room[]{
                                 new Room(false)
-                         }),
-                        new  Flat(4, new Room[]{
+                        }),
+                        new Flat(4, new Room[]{
                                 new Room(true),
                                 new Room(false)
-                }),
+                        }),
                 }),
                 new Floor(2, new Flat[]{
                         new Flat(5, new Room[]{
@@ -43,14 +43,14 @@ public class Homework04_OOP {
                                 new Room(false),
                                 new Room(false)
                         }),
-                        new  Flat(6, new Room[]{
+                        new Flat(6, new Room[]{
                                 new Room(true),
                                 new Room(false)
                         }),
-                        new  Flat(7, new Room[]{
+                        new Flat(7, new Room[]{
                                 new Room(false)
                         }),
-                        new  Flat(8, new Room[]{
+                        new Flat(8, new Room[]{
                                 new Room(true),
                                 new Room(false),
                                 new Room(false)
@@ -69,7 +69,7 @@ public class Homework04_OOP {
         for (Floor floor : floors) {
             floor.print();
             var flats = floor.flats;
-            for (Flat flat: flats) {
+            for (Flat flat : flats) {
                 flat.print();
                 var rooms = flat.rooms;
                 for (Room room : rooms) {
