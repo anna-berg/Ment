@@ -17,7 +17,6 @@ public class Helper {
         try (Stream<String> lines = Files.lines(filePath, UTF_8)) {
             return lines.map(s -> s.split(","))
                     .skip(1)
-                    .filter(strings -> strings.length > 1)
                     .map(strings -> new Product(Integer.parseInt(strings[0]), strings[1], strings[2]))
                     .collect(Collectors.toList());
         }
