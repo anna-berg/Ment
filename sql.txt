@@ -1,0 +1,100 @@
+CREATE DATABASE recipe_book;
+DROP DATABASE recipe_book;
+
+CREATE TYPE measure_type AS ENUM (
+    'WEIGHT',
+    'SIZE',
+    'CALORIES'
+    );
+
+CREATE TYPE user_type AS ENUM (
+    'USER',
+    'ADMIN'
+    );
+
+CREATE TABLE product
+(
+    id            SERIAL PRIMARY KEY,
+    name          VARCHAR(256) NOT NULL UNIQUE,
+    proteins      INT,
+    fats          INT,
+    carbohydrates INT
+);
+
+CREATE TABLE author
+(
+    id   SERIAL PRIMARY KEY,
+    name VARCHAR(256) NOT NULL UNIQUE
+);
+
+CREATE TABLE category_recipe
+(
+    id       SERIAL PRIMARY KEY,
+    category VARCHAR(256) NOT NULL UNIQUE
+);
+
+
+CREATE TABLE recipe
+(
+    id          SERIAL PRIMARY KEY,
+    title       VARCHAR(256) NOT NULL,
+    author      INT REFERENCES author (id),
+    description TEXT         NOT NULL,
+    measure     measure_type,
+    category    INT REFERENCES category_recipe (id)
+);
+
+CREATE TABLE recipe_product
+(
+    recipe_id  INT REFERENCES recipe (id),
+    product_id INT REFERENCES product (id)
+);
+
+-- CREATE TABLE snack
+-- (
+--     id          SERIAL PRIMARY KEY,
+--     product     INT REFERENCES product (id),
+--     description VARCHAR(256)
+-- );
+
+CREATE TABLE site_user
+(
+    id       SERIAL PRIMARY KEY,
+    name     VARCHAR(256) NOT NULL,
+    email    VARCHAR(256) NOT NULL UNIQUE,
+    password VARCHAR(256) NOT NULL,
+    role     user_type    NOT NULL
+);
+
+CREATE TABLE daly_menu
+(
+    id           SERIAL PRIMARY KEY,
+    breakfast    INT REFERENCES recipe (id),
+    first_snack  INT REFERENCES recipe (id),
+    lunch        INT REFERENCES recipe (id),
+    second_snack INT REFERENCES recipe (id),
+    dinner       INT REFERENCES recipe (id)
+);
+
+CREATE TABLE favorites
+(
+    user_id     INT REFERENCES site_user (id),
+    day_id      INT REFERENCES daly_menu (id),
+    recipe_id   INT REFERENCES recipe (id),
+    rating      INT,
+    adding_date TIMESTAMP
+);
+
+CREATE TABLE grouped
+(
+    id          SERIAL PRIMARY KEY,
+    group_title VARCHAR(256),
+    day_id      INT REFERENCES daly_menu (id)
+);
+
+CREATE TABLE group_day
+(
+    day_id   INT REFERENCES daly_menu (id),
+    group_id INT REFERENCES grouped (id),
+    position INT NOT NULL UNIQUE
+);
